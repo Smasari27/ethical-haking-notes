@@ -1,4 +1,4 @@
-# ethical-haking-notes
+# ethical-hacking-notes
 this is where i will be sharing myh notes on honing my ethcal hacking skilss . which include owasp and 10 different vulnerabilit
 
    Topics Covered
