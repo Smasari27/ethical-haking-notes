@@ -1,0 +1,14 @@
+PLATFORM: portswigger web security Academy
+
+DIFFCULTY: APPRENTICE/PRACTITIONER
+
+VULNERABILITY: OWASP Top 10-injection
+
+LAB OBJECIVE: so today I worked on lab which the end goal was to get hidden items or in this case hiden gifts. by manipulating the category section of the page and sending a payload which will give me access to the hidden items of the website.
+
+PROCESS: 
+ first I ran the lab, headed to the gift section of the website. then i went into my burpsuite and headed proxy. under it i found the link to the gift part of the website . sent the link to the repeater to change/edit the payload being sent to the webpage. so i edited the category changing it to category=Gifts'+OR+1=1--. 
+
+RESULT: this gave me access to hidden gift items which showed that the lab was a success. making it equals to 1 gives me access to the hidden details, if it as turned to zero it would have given me access to the unreleased items 
+
+
