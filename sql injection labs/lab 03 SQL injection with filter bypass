@@ -1,0 +1,14 @@
+PLATFORM: portswigger web security Academy
+
+DIFFCULTY: APPRENTICE/PRACTITIONER
+
+VULNERABILITY: 
+SQL injection with filter bypass via xml encoding
+
+LAB OBJECIVE: 
+To gain login credentials of the administrator user
+
+
+Process: I navigated my way to any product which appeared on the website. I then proceeded to check stock, this sent a a request/response on my burpsuite. I then moved it to to my repeater. I continued by trying SELECT AND UNION in the store id but also the product id which then signaled alerting a bypass. I then proceeded to use 1 UNION SELECT username || '-' || password FROM users. i selected it and used my hackverter to convert it into hex entities, which i then sent the payload.
+
+RESULT: The response returned 240 units in stock, along with the administrator's username and password. I also retrieved credentials for users "carlos" and "wiener."
