@@ -1,0 +1,11 @@
+PLATFORM: portswigger web security Academy
+
+DIFFCULTY: APPRENTICE/PRACTITIONER
+
+VULNERABILITY: SQL injection attack, querying the database type and version on MySQL and Microsoft
+
+LAB OBJECIVE: To query the database and to check the version of microsoft
+
+Process: i first made my way to the accessories part of the website then i  sent for the request from the page. i proceeded to send ' order by 1# as the payload i did not use -- because it doesnt bypass the webpage. I then inserted letters to page to see if they were words in the page by sending the payload ' UNION SELECT 'a', 'a'#, which i got a response back. Finally, i sent the payload ' UNION SELECT @@  version, NULL# to recieve they type of microsoft that is currently being used but also each payload sent was first encoded by doing ctrl + U
+
+RESULT: I successfully got the version 8.0.42-0ubuntu0.20.04.1
