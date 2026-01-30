@@ -1,0 +1,18 @@
+PLATFORM: portswigger web security Academy
+
+DIFFCULTY: APPRENTICE/PRACTITIONER
+
+VULNERABILITY: listing the database contents on non-Oracle databases
+
+LAB OBJECIVE: To find the administrator details and gain access in to the account.
+
+Process: Firstly, I needed to  the version which was running on the webpage, i sent the payloads to the page to check the version but the one i got a response with was ' UNION SELECT ()version, NULL--. The response was PostgreSQL 11.11. I then proceeded to search up the names of tables were online  for PostgreSQL. which was table_name. I sent the payload ' UNION SELECT table_name, NULL FROM information_schema.tables--. I then got the name of the user table as users_hwaiey. I sent a payload to recieve the name for the coulms which i had to also look up on google. i then proceeded to send the payload UNION SELECT column_name, NULL FROM information_schema.columns WHERE table_name = 'users_hwaiey'--. I then go the files for the username and password which where:
+
+password_ujatzx
+username_nzispi
+  I then sent the payload ' UNION SELECT username_nzispi, password_ujatzx FROM users_hwaiey-- which then gave me list of users
+
+RESULT; I successfully got access into the administrator account with the details
+
+administrator 
+g9fnzo7kvly4lpaolyjf
