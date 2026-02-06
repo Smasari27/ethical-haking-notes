@@ -1,0 +1,22 @@
+PLATFORM: portswigger web security Academy
+
+DIFFCULTY: APPRENTICE/PRACTITIONER
+
+VULNERABILITY: listing the database contents on Oracle databases
+
+LAB OBJECIVE: To find the administrator details and gain access in to the account.
+
+Process: Firstly, I checked the no. of columns which there were 2 . I did that by sending the payload ' order by 3--. this ended up sending an error which lets me know the no. of columns. which means for each payload now, I have to include a command for 2 columns by leaving the second command empty as NULL. I needed the version which was running on the webpage, i sent the payloads to the page to check the version by  ' UNION SELECT banner FROM v$version. '+UNION+SELECT+table_name,NULL+FROM+all_tables--. i got USERS_WPMEGF which was table_name. I sent a payload to recieve the name for the columns which i had to also look up on google. i then proceeded to send the payload '+UNION+SELECT+column_name,NULL+FROM+all_tab_columns+WHERE+table_name='USERS_WPMEGF'--. I then go the files for the username and password which where:
+USERNAME_TLDYWP
+PASSWORD_NMKMUZ
+
+
+
+
+  I then sent the payload '+UNION+SELECT+USERNAME_TLDYWP,+PASSWORD_NMKMUZ+FROM+USERS_WPMEGF-- which then gave me list of users and passwords
+
+RESULT: i got the login details for the admin account
+
+
+administrator
+rmv5w6aohx0s4ks58f4f8988
