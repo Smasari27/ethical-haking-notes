@@ -1,1 +1,12 @@
-UNION SELECT NULL, NULL, NULL--
+
+PLATFORM: portswigger web security Academy
+
+DIFFCULTY: APPRENTICE/PRACTITIONER
+
+VULNERABILITY: SQL injection UNION attack, determining the number of columns returned by the query
+
+LAB OBJECIVE: Determining the number of columns returned by a query
+
+Process:I first started by sending the payload ' order by 1--, whihc returned a 200 okay response.I then proceeded by uping the numbers  by 1 so i did 2 and 3. This all gave a 200 ok response. I then moved on too 4 which gave me an error indicating that there is only 3 columns. I then sent the other payload ' UNION SELECT NULL, NULL, NULL--. 
+
+RESULT: I got a 200 ok response which proves they are 3 columns and i succesfully passed the lab.
