@@ -1,0 +1,11 @@
+PLATFORM: portswigger web security Academy
+
+DIFFCULTY: APPRENTICE/PRACTITIONER
+
+VULNERABILITY: SQL injection UNION attack, finding a column containing text
+
+LAB OBJECIVE: Finding a column containing text
+
+Process: the vulnerability was in the  product category filter. I started off by sending the payload order by 1--. i moved on by substituting the no. 1 with 2 and 3. this lead to me finding out that there is 3 columns cause it gave me an error on the number 4. i proceeded to sending the next payload  ' UNION SELECT NULL, NULL, NULL--. but also  the payloads have to be url encoded first. I then removed the first null and inputed the column name/data 'KFjmUh'. this gave an error i then sent the payload ' UNION SELECT NULL, 'KFjmUh', NULL--.
+
+RESULT: I got the information of the text column and i succesfully passed the lab.
