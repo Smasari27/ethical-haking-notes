@@ -6,7 +6,7 @@ VULNERABILITY: SQL injection UNION attack, retrieving multiple values in a singl
 
 LAB OBJECIVE:  To gain access to the administrator account 
 
-Process:I first started by schrcking the ni. of columns by sending the payload ' order by 1--, whihc returned a 200 okay response.I then proceeded by uping to the no. 2 then it failed at 3 giving me a server error which indicates there is only 2 columns. I then sent the payload ' UNION SELECT NULL,username||'~'||password FROM users-- after i url encoded it. this payload returns the username and passowrd side by side at the same time but is seperated by ~ . it succesfully returned the informations of the users. the information for the administrative account is
+Process:I first started by checking the no. of columns by sending the payload ' order by 1--, whihc returned a 200 okay response.I then proceeded by uping to the no. 2 then it failed at 3 giving me a server error which indicates there is only 2 columns. I then sent the payload ' UNION SELECT NULL,username||'~'||password FROM users-- after i url encoded it. this payload returns the username and passowrd side by side at the same time but is seperated by ~ . it succesfully returned the informations of the users. the information for the administrative account is
 
 administrator~8rsuta19t8pub1luli4c
 
